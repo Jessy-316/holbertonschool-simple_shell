@@ -9,11 +9,11 @@ This shell can execute commands from the user's environment, handle basic comman
 - [Installation](#installation)
 - [Usage](#usage)
 - [Commands](#commands)
-- [Included Libraries](#stdio.h, stdlib.h, unistd.h, stddef.h, string.h and sys/wait.h)
-- [Environment Variables](#printenv)
-- [Contributing](#Jerry Meletiche)
+- [Included Libraries] (#stdio.h, stdlib.h, unistd.h, stddef.h, string.h and sys/wait.h)
+- [Environment Variables] (#printenv)
+- [Contributing] (#Jerry Meletiche)
 - [License](#license)
-- [Author](#Francisco Báez)
+- [Author] (#Francisco Báez)
 
 ## Features
 
