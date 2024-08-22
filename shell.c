@@ -18,7 +18,6 @@ int main(void)
 		/* Reading the user input */
 		if (getline(&input, &buffer_size, stdin) == -1)
 		{
-			printf("\n");
 			free(input);
 			break; /* Handling the eof (ctrl + D) */
 		}
@@ -27,6 +26,7 @@ int main(void)
 		if (input[strlen(input)] == '\n')
 			input[strlen(input)] = '\0';
 		args = parse_input(input); /* Tokenize the user input */
+
 		if (args == NULL)
 		{
 			free(input);
@@ -45,5 +45,7 @@ int main(void)
 		}
 		free(args);
 	}
+	if (isatty(STDIN_FILENO))
+		printf("\n");
 	return (0);
 }
