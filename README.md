@@ -9,10 +9,10 @@ This shell can execute commands from the user's environment, handle basic comman
 - [Installation](#installation)
 - [Usage](#usage)
 - [Commands](#commands)
-- [Included Libraries] (#included-libraries)
-- [Environment Variables] (#environment-variables)
-- [Contributing] (#contributing)
-- [Author] (#author)
+- [Included Libraries](#included-libraries)
+- [Environment Variables](#environment-variables)
+- [Contributing](#contributing)
+- [Author](#author)
 
 ## Features
 
