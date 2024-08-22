@@ -9,7 +9,7 @@ int main(void)
 	char **args;
 	char *input = NULL;
 	size_t buffer_size = 0;
-	int count = 0, mode = isatty(STDIN_FILENO);
+	int count = 0, mode = isatty(STDIN_FILENO), comparator;
 
 	while (1)
 	{
@@ -32,14 +32,11 @@ int main(void)
 		}
 		if (args[0] != NULL)
 		{
-			if (strcmp(args[0], "exit") == 0)
-			{
-				free(input);
-				free(args);
-				break; /* Exits the shell program */
-			}
-			else if (find_or_execute_command(args) == -1)
-				printf("./hsh: %d: %s: not found\n", count, args[0]);
+			comparator = env_fetch(args, input, count);
+			if (comparator == 0)
+				continue;
+			else
+				break;
 		}
 		free(args);
 	}
