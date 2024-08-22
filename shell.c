@@ -28,11 +28,13 @@ int main(void)
 		if (args == NULL)
 		{
 			free(input);
+			free(args);
 			continue;
 		}
 		if (args[0] != NULL)
 		{
 			comparator = env_fetch(args, input, count);
+			free(args);
 			if (comparator == 0)
 				continue;
 			else
