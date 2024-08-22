@@ -68,7 +68,7 @@ You can access these variables using the '_getenv' function.
 
 ** Example of accessing the 'PATH' environment variable**:
     ```bash
-    char *path = _getenv("PATH");
+    char *path = _getenv("PATH")
     ```
 
 ## Contributing
