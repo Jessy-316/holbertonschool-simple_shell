@@ -9,11 +9,10 @@ This shell can execute commands from the user's environment, handle basic comman
 - [Installation](#installation)
 - [Usage](#usage)
 - [Commands](#commands)
-- [Included Libraries] (#stdio.h, stdlib.h, unistd.h, stddef.h, string.h and sys/wait.h)
-- [Environment Variables] (#printenv)
-- [Contributing] (#Jerry Meletiche)
-- [License](#license)
-- [Author] (#Francisco Báez)
+- [Included Libraries] (#included-libraries)
+- [Environment Variables] (#environment-variables)
+- [Contributing] (#contributing)
+- [Author] (#author)
 
 ## Features
 
@@ -36,9 +35,9 @@ This shell can execute commands from the user's environment, handle basic comman
     ```
 3. **Compile the program**:
     ```bash
-    gcc -Wall -Werror -Wextra -pedantic -std=gnu89 shell.c shell.h functions.c -o hsh
+    gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
     ```
-    This will generate the `simple shell` executable.
+    This will generate the `hsh` executable.
 
 ## Usage
 
@@ -46,4 +45,54 @@ To start the shell, run the following command in your terminal:
 
 ```bash
 ./hsh
+
+## Commands
+
+# - exit - Exits the shell.
+# - env - prints the environment.
+
+## Included Libraries
+
+- #include <stdio.h>
+- #include <stdlib.h>
+- #include <unistd.h>
+- #include <stddef.h>
+- #include <string.h>
+- #include <sys/wait.h>
+
+## Environment Variables
+
+The shell utilizes environment variables defined by the system. 
+You can access these variables using the '_getenv' function.
+
+** Example of accessing the 'PATH' environment variable**:
+    ```bash
+    char *path = _getenv("PATH");
+    ```
+
+## Contributing
+
+Contributions are welcomed!
+If you would like to contribute to this project, please follow these steps:
+
+1. **Clone the repositoriy.**
+
+2. **Create a new branch**
+    ```bash
+    git checkout -b feature-branch
+    ```
+3. **Make your changes and commit them**
+    ```bash
+    git commit -am 'Added new feature'
+    ```
+4. **Push to the branch**
+    ```bash
+    git push origin feature-branch
+    ```
+5. **Make a pull request**
+
+## Author
+
+**Francisco Antonio Báez López**
+**Jerry Luis Meletiche Baerga**
 
