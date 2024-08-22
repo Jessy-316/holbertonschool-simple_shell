@@ -45,6 +45,7 @@ To start the shell, run the following command in your terminal:
 
 ```bash
 ./hsh
+```
 
 ## Commands
 
