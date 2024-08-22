@@ -49,8 +49,8 @@ To start the shell, run the following command in your terminal:
 
 ## Commands
 
-# exit - Exits the shell.
-# env - prints the environment.
+# exit # - Exits the shell.
+# env # - prints the environment.
 
 ## Included Libraries
 
