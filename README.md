@@ -49,8 +49,8 @@ To start the shell, run the following command in your terminal:
 
 ## Commands
 
-# exit # - Exits the shell.
-# env # - prints the environment.
+exit - Exits the shell.
+env - prints the environment.
 
 ## Included Libraries
 
@@ -66,7 +66,7 @@ To start the shell, run the following command in your terminal:
 The shell utilizes environment variables defined by the system. 
 You can access these variables using the '_getenv' function.
 
-** Example of accessing the 'PATH' environment variable**:
+** Example of accessing the 'PATH' environment variable** :
     ```bash
     char *path = _getenv("PATH");
     ```
