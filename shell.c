@@ -9,21 +9,19 @@ int main(void)
 	char **args;
 	char *input = NULL;
 	size_t buffer_size = 0;
-	int count = 0;
+	int count = 0, mode = isatty(STDIN_FILENO);
 
 	while (1)
 	{
-		if (isatty(STDIN_FILENO))
+		if (mode)
 			printf("#cisfun$ ");
-		/* Reading the user input */
-		if (getline(&input, &buffer_size, stdin) == -1)
+		if (getline(&input, &buffer_size, stdin) == -1) /* Reading the user input */
 		{
 			free(input);
 			break; /* Handling the eof (ctrl + D) */
 		}
 		count++;
-		/* Trim trailing the newline */
-		if (input[strlen(input)] == '\n')
+		if (input[strlen(input)] == '\n') /* Trim trailing the newline */
 			input[strlen(input)] = '\0';
 		args = parse_input(input); /* Tokenize the user input */
 
@@ -45,7 +43,7 @@ int main(void)
 		}
 		free(args);
 	}
-	if (isatty(STDIN_FILENO))
+	if (mode)
 		printf("\n");
 	return (0);
 }
